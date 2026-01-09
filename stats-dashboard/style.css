@@ -1,0 +1,278 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --blue: #5b8cff;
+  --blue-soft: #eef2ff;
+  --text: #111827;
+  --muted: #6b7280;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ================= TOP METRICS ================= */
+.top-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mini-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.mini-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 22px;
+  color: var(--text);
+}
+
+/* subtle backgrounds */
+.blue {
+  background: #eef3ff;
+}
+.green {
+  background: #ecfdf5;
+}
+.red {
+  background: #fff1f2;
+}
+.cyan {
+  background: #ecfeff;
+}
+.yellow {
+  background: #fff7ed;
+}
+.purple {
+  background: #f5f3ff;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.revenue {
+  grid-column: span 6;
+}
+.yearly {
+  grid-column: span 3;
+}
+.monthly {
+  grid-column: span 3;
+}
+.salary {
+  grid-column: span 6;
+}
+.small {
+  grid-column: span 3;
+}
+.highlight {
+  grid-column: span 3;
+  background: var(--blue);
+  color: #fff;
+}
+.weekly {
+  grid-column: span 6;
+}
+.table {
+  grid-column: span 6;
+}
+
+h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.positive {
+  color: #16a34a;
+  font-size: 13px;
+}
+.negative {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* ===== CHARTS ===== */
+.chart {
+  margin-top: 14px;
+  border-radius: 10px;
+  background: #f1f5ff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BAR CHART */
+.bar-chart::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #5b8cff 0%,
+    #5b8cff 12%,
+    transparent 12%,
+    transparent 20%,
+    #93b0ff 20%,
+    #93b0ff 32%,
+    transparent 32%,
+    transparent 40%,
+    #5b8cff 40%,
+    #5b8cff 52%,
+    transparent 52%
+  );
+}
+
+.bar-chart {
+  height: 160px;
+}
+
+/* DONUT */
+.circle {
+  width: 120px;
+  height: 120px;
+  margin: 12px auto 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--blue) 0 75%, #e5e7eb 75% 100%);
+}
+
+/* LINE */
+.line,
+.line-large {
+  background: linear-gradient(
+    135deg,
+    rgba(91, 140, 255, 0.3),
+    rgba(91, 140, 255, 0.05)
+  );
+}
+
+.line {
+  height: 60px;
+}
+.line-large {
+  height: 150px;
+}
+
+.bar-large {
+  height: 180px;
+}
+.bars-mini {
+  height: 80px;
+}
+
+/* ===== PRODUCTS ===== */
+.highlight p {
+  opacity: 0.85;
+  font-size: 13px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted);
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+td {
+  padding: 12px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.low {
+  background: #ecfeff;
+  color: #0284c7;
+}
+.medium {
+  background: #fff7ed;
+  color: #ea580c;
+}
+.high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .top-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .top-cards,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

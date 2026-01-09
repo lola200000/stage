@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- TOP MINI CARDS -->
+      <div class="top-cards">
+        <div class="mini-card blue">Reports <strong>59</strong></div>
+        <div class="mini-card green">Payroll <strong>$96k</strong></div>
+        <div class="mini-card red">Events <strong>696</strong></div>
+        <div class="mini-card cyan">Projects <strong>356</strong></div>
+        <div class="mini-card yellow">Clients <strong>3,650</strong></div>
+        <div class="mini-card purple">Employees <strong>96</strong></div>
+      </div>
+
+      <!-- MAIN GRID -->
+      <div class="grid">
+        <div class="card revenue">
+          <h3>Revenue Updates</h3>
+          <p class="muted">Overview of Profit</p>
+          <div class="chart bar-chart"></div>
+        </div>
+
+        <div class="card yearly">
+          <h3>Yearly Breakup</h3>
+          <strong>$36,358</strong>
+          <span class="positive">+9% last year</span>
+          <div class="chart circle"></div>
+        </div>
+
+        <div class="card monthly">
+          <h3>Monthly Earnings</h3>
+          <strong>$6,820</strong>
+          <span class="negative">-9% last year</span>
+          <div class="chart line"></div>
+        </div>
+
+        <div class="card salary">
+          <h3>Employee Salary</h3>
+          <div class="chart bar-large"></div>
+          <div class="row">
+            <div>Salary <strong>$36,358</strong></div>
+            <div>Profit <strong>$5,296</strong></div>
+          </div>
+        </div>
+
+        <div class="card small">
+          <h4>Customers</h4>
+          <strong>36,358</strong>
+          <span class="positive">+9%</span>
+          <div class="chart line"></div>
+        </div>
+
+        <div class="card small">
+          <h4>Projects</h4>
+          <strong>78,298</strong>
+          <span class="positive">+9%</span>
+          <div class="chart bars-mini"></div>
+        </div>
+
+        <div class="card highlight">
+          <h3>Best Selling Products</h3>
+          <p>Overview 2024</p>
+
+          <div class="product">
+            <span>MaterialPro</span>
+            <span>55%</span>
+          </div>
+
+          <div class="product">
+            <span>Flexy Admin</span>
+            <span>20%</span>
+          </div>
+        </div>
+
+        <div class="card weekly">
+          <h3>Weekly Stats</h3>
+          <div class="chart line-large"></div>
+        </div>
+
+        <div class="card table">
+          <h3>Top Performers</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Assigned</th>
+                <th>Project</th>
+                <th>Priority</th>
+                <th>Budget</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sunil Joshi</td>
+                <td>Elite Admin</td>
+                <td><span class="badge low">Low</span></td>
+                <td>$3.9k</td>
+              </tr>
+              <tr>
+                <td>John Deo</td>
+                <td>Flexy Admin</td>
+                <td><span class="badge medium">Medium</span></td>
+                <td>$24.5k</td>
+              </tr>
+              <tr>
+                <td>Nirav Joshi</td>
+                <td>Material Pro</td>
+                <td><span class="badge high">High</span></td>
+                <td>$12.8k</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
