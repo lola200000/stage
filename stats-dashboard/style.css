@@ -261,9 +261,11 @@ td {
   overflow: hidden;
 }
 
-.progress div {
+.progress-bar {
   height: 100%;
+  width: 0;
   background: var(--blue);
+  transition: width 0.6s ease;
 }
 
 /* Bottom */
