@@ -12,6 +12,8 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -19,7 +21,22 @@
       <!-- KPI -->
       <div class="kpi">
         <div class="card kpi-card">
-          <div class="kpi-icon blue"></div>
+          <div class="kpi-icon blue">
+            <!-- Reports -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 3v18h18M9 17V9m4 8V5m4 12v-6"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Reports</span>
             <div class="kpi-value">59</div>
@@ -27,7 +44,23 @@
         </div>
 
         <div class="card kpi-card">
-          <div class="kpi-icon green"></div>
+          <div class="kpi-icon green">
+            <!-- Payroll -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m0 0c2.5 0 4.5-1.5 4.5-3.5S14.5 11 12 11
+                 s-4.5-1.5-4.5-3.5S9.5 4 12 4m0 14v2"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Payroll</span>
             <div class="kpi-value">$96k</div>
@@ -35,7 +68,24 @@
         </div>
 
         <div class="card kpi-card">
-          <div class="kpi-icon pink"></div>
+          <div class="kpi-icon pink">
+            <!-- Events -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 7V3m8 4V3M3 11h18M5 21h14
+                 a2 2 0 002-2V7a2 2 0 00-2-2H5
+                 a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Events</span>
             <div class="kpi-value">696</div>
@@ -43,7 +93,25 @@
         </div>
 
         <div class="card kpi-card">
-          <div class="kpi-icon blue"></div>
+          <div class="kpi-icon blue">
+            <!-- Projects -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2
+                 m-9 0h10a2 2 0 012 2v9
+                 a2 2 0 01-2 2H6a2 2 0 01-2-2V8
+                 a2 2 0 012-2z"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Projects</span>
             <div class="kpi-value">356</div>
@@ -51,7 +119,25 @@
         </div>
 
         <div class="card kpi-card">
-          <div class="kpi-icon yellow"></div>
+          <div class="kpi-icon yellow">
+            <!-- Clients -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 18.75c0-1.657-2.686-3-6-3
+                 s-6 1.343-6 3M12 12
+                 a3 3 0 100-6 3 3 0 000 6
+                 zm7.5 6.75c0-1.657-1.79-3-4-3"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Clients</span>
             <div class="kpi-value">3,650</div>
@@ -59,7 +145,25 @@
         </div>
 
         <div class="card kpi-card">
-          <div class="kpi-icon purple"></div>
+          <div class="kpi-icon purple">
+            <!-- Employees -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 7.5a3.75 3.75 0 11-7.5 0
+                 3.75 3.75 0 017.5 0z
+                 M4.5 20.25c0-3.728 3.358-6.75
+                 7.5-6.75s7.5 3.022 7.5 6.75"
+              />
+            </svg>
+          </div>
           <div class="kpi-info">
             <span class="kpi-label">Employees</span>
             <div class="kpi-value">96</div>
@@ -80,10 +184,8 @@
             </select>
           </div>
 
-          <div class="salary-chart">
-            <div class="chart-placeholder">
-              <canvas></canvas>
-            </div>
+          <div class="chart-placeholder">
+            <canvas id="revenueChart"></canvas>
           </div>
         </div>
 
@@ -92,6 +194,7 @@
             <h3>$36,358</h3>
             <p>Yearly breakup</p>
             <span class="trend up">+9%</span>
+            <canvas id="yearlyChart" height="120"></canvas>
           </div>
 
           <div class="card stat">
@@ -102,19 +205,14 @@
         </div>
       </div>
 
-      <!-- Middle cards -->
+      <!-- Middle -->
       <div class="centre">
         <div class="card salary">
           <h3>Employee Salary</h3>
 
-          <div class="salary-chart">
-            <div class="chart-placeholder">
-              <canvas></canvas>
-            </div>
+          <div class="chart-placeholder">
+            <canvas id="salaryChart"></canvas>
           </div>
-          ``
-
-          <div class="salary-chart">Salary chart</div>
 
           <div class="salary-footer">
             <div>
@@ -132,10 +230,9 @@
           <h4>Customers</h4>
           <div class="stat-value">36,358</div>
           <span class="trend down">-9%</span>
-          <div class="mini-chart">
-            <div class="chart-placeholder">
-              <canvas></canvas>
-            </div>
+
+          <div class="chart-placeholder mini">
+            <canvas id="customersChart"></canvas>
           </div>
         </div>
 
@@ -143,10 +240,9 @@
           <h4>Projects</h4>
           <div class="stat-value">78,298</div>
           <span class="trend up">+9%</span>
-          <div class="mini-chart">
-            <div class="chart-placeholder">
-              <canvas></canvas>
-            </div>
+
+          <div class="chart-placeholder mini">
+            <canvas id="projectsChart"></canvas>
           </div>
         </div>
 
@@ -190,10 +286,8 @@
           <h3>Weekly Stats</h3>
           <p class="muted">Average sales</p>
 
-          <div class="weekly-chart">
-            <div class="chart-placeholder">
-              <canvas></canvas>
-            </div>
+          <div class="chart-placeholder">
+            <canvas id="weeklyChart"></canvas>
           </div>
 
           <ul class="weekly-list">
@@ -245,6 +339,7 @@
         </table>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
