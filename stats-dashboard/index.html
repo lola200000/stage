@@ -171,175 +171,230 @@
         </div>
       </div>
 
-      <!-- Revenue -->
-      <div class="main">
-        <div class="card revenue">
-          <div class="card-header">
-            <div>
-              <h2>Revenue Updates</h2>
-              <p>Overview of profit</p>
-            </div>
-            <select>
-              <option>March 2024</option>
-            </select>
-          </div>
+      <!-- Revenue --><!-- Main -->
+     <div class="card revenue-card">
+  <div class="revenue-left">
+    <h3>Revenue Updates</h3>
+    <p class="subtitle">Overview of Profit</p>
 
-          <div class="chart-placeholder">
-            <canvas id="revenueChart"></canvas>
-          </div>
-        </div>
+    <canvas id="revenueChart"></canvas>
+  </div>
 
-        <div class="side">
-          <div class="card stat">
-            <h3>$36,358</h3>
-            <p>Yearly breakup</p>
-            <span class="trend up">+9%</span>
-            <canvas id="yearlyChart" height="120"></canvas>
-          </div>
-
-          <div class="card stat">
-            <h3>$6,820</h3>
-            <p>Monthly earnings</p>
-            <span class="trend up">+9%</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Middle -->
-      <div class="centre">
-        <div class="card salary">
-          <h3>Employee Salary</h3>
-
-          <div class="chart-placeholder">
-            <canvas id="salaryChart"></canvas>
-          </div>
-
-          <div class="salary-footer">
-            <div>
-              <span class="muted">Salary</span>
-              <div><strong>$36,358</strong></div>
-            </div>
-            <div>
-              <span class="muted">Profit</span>
-              <div><strong>$5,296</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card small-stat">
-          <h4>Customers</h4>
-          <div class="stat-value">36,358</div>
-          <span class="trend down">-9%</span>
-
-          <div class="chart-placeholder mini">
-            <canvas id="customersChart"></canvas>
-          </div>
-        </div>
-
-        <div class="card small-stat">
-          <h4>Projects</h4>
-          <div class="stat-value">78,298</div>
-          <span class="trend up">+9%</span>
-
-          <div class="chart-placeholder mini">
-            <canvas id="projectsChart"></canvas>
-          </div>
-        </div>
-
-        <div class="card notification">
-          <div class="notification-title">Super awesome, Vue coming soon!</div>
-          <p class="muted">22 March, 2024</p>
-
-          <div class="avatars">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="card best-selling">
-          <h3>Best Selling Products</h3>
-          <p class="muted">Overview 2024</p>
-
-          <div class="product">
-            <span>MaterialPro</span>
-            <span>55%</span>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" data-value="55"></div>
-          </div>
-
-          <div class="product">
-            <span>Flexy Admin</span>
-            <span>20%</span>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" data-value="20"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Weekly -->
-      <div class="bottom">
-        <div class="card weekly">
-          <h3>Weekly Stats</h3>
-          <p class="muted">Average sales</p>
-
-          <div class="chart-placeholder">
-            <canvas id="weeklyChart"></canvas>
-          </div>
-
-          <ul class="weekly-list">
-            <li>Top Sales <span>+68</span></li>
-            <li>Best Seller <span>+68</span></li>
-            <li>Most Commented <span>+68</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Table -->
-      <div class="card table-card">
-        <div class="card-header">
-          <h2>Top Performers</h2>
-          <select>
-            <option>March 2024</option>
-          </select>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Employee</th>
-              <th>Project</th>
-              <th>Priority</th>
-              <th>Budget</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sunil Joshi</td>
-              <td>Elite Admin</td>
-              <td><span class="badge low">Low</span></td>
-              <td>$3.9k</td>
-            </tr>
-            <tr>
-              <td>John Deo</td>
-              <td>Flexy Admin</td>
-              <td><span class="badge medium">Medium</span></td>
-              <td>$24.5k</td>
-            </tr>
-            <tr>
-              <td>Nirav Joshi</td>
-              <td>Material Pro</td>
-              <td><span class="badge high">High</span></td>
-              <td>$12.8k</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="revenue-right">
+    <div class="stat">
+      <span class="value number" data-target="63489">0</span>
+      <span>Total Earnings</span>
     </div>
 
-    <script src="script.js"></script>
+    <div class="stat">
+      <span class="value number" data-target="48820">0</span>
+      <span>Earnings this month</span>
+    </div>
+
+        <div class="card">
+          <h3>Monthly Earnings</h3>
+          <span class="big-number number" data-target="6820">0</span>
+          <canvas id="lineChart"></canvas>
+    </div>
+
+    <button class="btn">View Full Report</button>
+  </div>
+</div>
+        <div class="card">
+          <h3>Yearly Breakup</h3>
+          <div class="donut-wrapper">
+            <canvas id="donutChart"></canvas>
+            <div class="donut-center">
+              <span id="donutPercent">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="grid-bottom">
+
+  <!-- Employee Salary -->
+  <div class="card">
+    <h4>Employee Salary</h4>
+    <p class="subtitle">Every month</p>
+    <canvas id="salaryChart"></canvas>
+  </div>
+
+  <!-- Customers -->
+  <div class="card stat-card">
+    <h4>Customers</h4>
+    <h2 class="number" data-target="36358">0</h2>
+    <span class="trend up">+9%</span>
+    <canvas id="customersChart"></canvas>
+  </div>
+
+  <!-- Projects -->
+  <div class="card stat-card">
+    <h4>Projects</h4>
+    <h2 class="number" data-target="78298">0</h2>
+    <span class="trend down">-4%</span>
+    <canvas id="projectsChart"></canvas>
+  </div>
+
+  <!-- Super awesome vue -->
+  <div class="card vue-card">
+    <img src="https://i.imgur.com/9Q9ZQZQ.png" alt="">
+    <h4>Super awesome Vue coming soon!</h4>
+    <p>27 March, 2024</p>
+    <div class="avatars">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Best Selling Products -->
+  <div class="card best-selling">
+    <h4>Best Selling Products</h4>
+    <p class="subtitle">Overview 2024</p>
+
+    <div class="product">
+      <div>
+        <strong>MaterialPro</strong>
+        <span>$23,568</span>
+      </div>
+      <div class="progress">
+        <div style="width:55%"></div>
+      </div>
+      <span class="percent">55%</span>
+    </div>
+
+    <div class="product">
+      <div>
+        <strong>Flexy Admin</strong>
+        <span>$15,568</span>
+      </div>
+      <div class="progress">
+        <div style="width:20%"></div>
+      </div>
+      <span class="percent">20%</span>
+    </div>
+  </div>
+
+</div><div class="dashboard">
+
+  <!-- Weekly Stats -->
+  <div class="card weekly">
+    <h3>Weekly Stats</h3>
+    <span class="subtitle">Average sales</span>
+
+    <canvas id="weeklyChart"></canvas>
+
+    <div class="stats-list">
+      <div class="stat purple">
+        <span>Top Sales</span>
+        <strong>Johnathan Doe</strong>
+        <small>+68</small>
+      </div>
+      <div class="stat teal">
+        <span>Best Seller</span>
+        <strong>MaterialPro Admin</strong>
+        <small>+68</small>
+      </div>
+      <div class="stat red">
+        <span>Most Commented</span>
+        <strong>Ample Admin</strong>
+        <small>+68</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Performers -->
+  <div class="card table">
+    <div class="table-header">
+      <div>
+        <h3>Top Performers</h3>
+        <span class="subtitle">Best Employees</span>
+      </div>
+      <select>
+        <option>March 2024</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Assigned</th>
+          <th>Project</th>
+          <th>Priority</th>
+          <th>Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="user">
+            <img src="https://i.pravatar.cc/40?img=1" />
+            <div>
+              <strong>Sunil Joshi</strong>
+              <span>Web Designer</span>
+            </div>
+          </td>
+          <td>Elite Admin</td>
+          <td><span class="badge low">Low</span></td>
+          <td>$3.9K</td>
+        </tr>
+
+        <tr>
+          <td class="user">
+            <img src="https://i.pravatar.cc/40?img=2" />
+            <div>
+              <strong>John Deo</strong>
+              <span>Web Developer</span>
+            </div>
+          </td>
+          <td>Flexy Admin</td>
+          <td><span class="badge medium">Medium</span></td>
+          <td>$24.5K</td>
+        </tr>
+
+        <tr>
+          <td class="user">
+            <img src="https://i.pravatar.cc/40?img=3" />
+            <div>
+              <strong>Nirav Joshi</strong>
+              <span>Web Manager</span>
+            </div>
+          </td>
+          <td>Material Pro</td>
+          <td><span class="badge high">High</span></td>
+          <td>$12.8K</td>
+        </tr>
+
+        <tr>
+          <td class="user">
+            <img src="https://i.pravatar.cc/40?img=4" />
+            <div>
+              <strong>Yuvraj Sheth</strong>
+              <span>Project Manager</span>
+            </div>
+          </td>
+          <td>Xtreme Admin</td>
+          <td><span class="badge low">Low</span></td>
+          <td>$4.8K</td>
+        </tr>
+
+        <tr>
+          <td class="user">
+            <img src="https://i.pravatar.cc/40?img=5" />
+            <div>
+              <strong>Michael Doe</strong>
+              <span>Content Writer</span>
+            </div>
+          </td>
+          <td>Helping Hands</td>
+          <td><span class="badge high">High</span></td>
+          <td>$9.3K</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+    <script src="charts.js"></script>
   </body>
 </html>
