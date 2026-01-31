@@ -1,307 +1,107 @@
 /* ===== Base ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  color: #444;
 }
 
 body {
   background: #f5f7fa;
-  padding: 30px;
-}
-
-/* ===== Containers ===== */
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  font-family: "Inter", sans-serif;
+  color: #444;
 }
 
 /* ===== Cards ===== */
 .card {
-  background: #fff;
   border-radius: 12px;
-  padding: 20px;
+  border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== KPI ===== */
-.kpi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-}
-
-.kpi-card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.kpi-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.kpi-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke-width: 1.6;
-}
-
-/* Icon Colors */
-.kpi-icon.blue {
-  background: #e3f2fd;
-  color: #2196f3;
-}
-.kpi-icon.green {
-  background: #e6f4ea;
-  color: #27ae60;
-}
-.kpi-icon.pink {
-  background: #fdeef4;
-  color: #e91e63;
-}
-.kpi-icon.yellow {
-  background: #fff4e5;
-  color: #f0a500;
-}
-.kpi-icon.purple {
-  background: #f3e5f5;
-  color: #9c27b0;
-}
-
-.kpi-label {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.kpi-value {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-/* ===== Revenue ===== */
-.revenue-card {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr;
-  gap: 25px;
-}
-
-.revenue-left h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.revenue-left .subtitle {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.revenue-right {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.revenue-right .stat {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-}
-
-.revenue-right .stat .value {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.btn {
-  padding: 10px;
-  background: #2979ff;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: #1c54b2;
-}
-
-/* ===== Yearly & Monthly ===== */
-.monthly-earning h3,
-.yearly-breakup h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.donut-wrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
-
-.donut-center {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-/* ===== Grid Bottom ===== */
-.grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 18px;
-}
-
-/* Small Stat Cards */
-.stat-card h4 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.stat-card .trend {
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.trend.up {
-  color: #27ae60;
-}
-.trend.down {
-  color: #e74c3c;
-}
-
-/* Best Selling */
-.best-selling h4 {
-  margin-bottom: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.product {
-  margin-top: 12px;
-}
-
-.product strong {
-  font-size: 0.95rem;
-}
-
-.progress {
-  background: #eceff1;
-  border-radius: 8px;
-  height: 8px;
-  margin: 6px 0;
-}
-
-.progress div {
-  background: #2979ff;
-  height: 100%;
-  border-radius: 8px;
-}
-
-/* ===== Dashboard Bottom ===== */
-.dashboard {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 25px;
-}
-
-/* Weekly */
-.weekly h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
+/* KPI icons */
+.card i {
   margin-bottom: 6px;
 }
 
-.stats-list {
-  margin-top: 15px;
-}
-
-.stats-list .stat {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  padding: 8px 0;
-}
-
-.stats-list .stat strong {
+/* ===== Headings ===== */
+h5,
+h6 {
   font-weight: 600;
 }
 
-.stats-list .purple {
-  color: #8e44ad;
-}
-.stats-list .teal {
-  color: #006064;
-}
-.stats-list .red {
-  color: #c0392b;
+/* ===== Charts ===== */
+canvas {
+  max-width: 100%;
 }
 
-/* Top Table */
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.table-header h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th {
-  text-align: left;
+/* ===== Tables ===== */
+.table th {
   font-size: 0.85rem;
-  padding: 6px 0;
-  color: #555;
+  color: #666;
 }
 
-td {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
+.table td {
   font-size: 0.9rem;
+  vertical-align: middle;
 }
 
-select {
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* ===== Buttons ===== */
+.btn-primary {
+  border-radius: 10px;
+  font-weight: 600;
 }
 
-@media (max-width: 900px) {
-  .revenue-card {
-    grid-template-columns: 1fr;
+/* ===== Images ===== */
+.card img {
+  border-radius: 10px;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 768px) {
+  .fs-4 {
+    font-size: 1.2rem !important;
   }
-  .dashboard {
-    grid-template-columns: 1fr;
+}
+.table td {
+  vertical-align: middle;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/*
+tel
+*/
+
+@media (max-width: 768px) {
+  /* KPI cards */
+
+  .card {
+    padding: 14px;
+  }
+
+  /* Hide project column */
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    display: none;
+  }
+
+  /* Smaller avatars */
+  table img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Budget align right */
+  table td:last-child {
+    text-align: right;
+    font-weight: 600;
+  }
+
+  /* Reduce font size */
+  table td,
+  table th {
+    font-size: 0.85rem;
   }
 }
